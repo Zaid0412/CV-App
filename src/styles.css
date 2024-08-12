@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap');
+
+
+*{
+    font-family: "Outfit", sans-serif;
+    transition: all .2s ease;
+
+}
+
+body{
+    --grey:#F3F2F2;
+    --black:#222831;
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+}
+
+.top{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+ /* CV Card */
+
+.cv-card{
+    box-sizing: border-box;
+    width: 50vw;
+    height: 90%;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 2em;
+    overflow: hidden;
+    position: sticky;
+}
+
+.bold{
+    font-weight: 300 !important;
+}
+
+header{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+header .fullname,
+header .title{
+    font-weight: 400;
+    margin: 0;
+}
+
+header span{
+    font-weight: 200;
+}
+
+header h2{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.4em;
+    font-size: 0.8em;
+}
+
+.fullname{
+    padding: 1em;
+    border-bottom: 2px solid var(--grey);
+    font-size: 2em;
+}
+
+.main{
+    box-sizing: border-box;
+    grid-row: 3/21;
+    padding: 2em;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 4em;
+}
+
+.title{
+    padding: 0.7em;
+    border-bottom: 2px solid #F3F2F2;
+}
+
+.heading{
+    letter-spacing: .5rem;
+    font-size: .9em;
+    font-weight: 700;
+}
+
+.profile{
+    border-right: 2px solid var(--grey);
+    grid-row: 1/2;
+}
+
+.contact{
+    border-right: 2px solid var(--grey);
+    grid-row: 2/3;
+}
+
+.skills{
+    border-right: 2px solid var(--grey);
+    padding-left: 1em;
+}
+
+.education{
+    border-right: 2px solid var(--grey);
+    grid-row: 3/5;
+}
+
+.work-exp{
+    padding-left: 1em;
+}
+
+.profile,
+.contact,
+.contact div,
+.education,
+.skills,
+.work-exp{
+    box-sizing: border-box;
+    padding-right: 1em;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+.icon{
+    width: 20px;
+    height: auto;
+}
+
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.location,
+.email,
+.phone{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+/* CV Form */
+
+.cv-form{
+    width: 50vw;
+    box-sizing: border-box;
+    padding: 4em;
+    overflow: hidden scroll;
+}
+
+.personal-info-form{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.personal-info-form h1{
+    grid-column: 1/3;
+    margin-left: .5em;
+}
+
+.personal-info-form input{
+    padding: 1em;
+    margin: 1em;
+}
+
+.title-input{
+    grid-column: 1/3;
+}
+
+input[type='text']{
+    border: none;
+    border-bottom: 3px solid var(--grey);
+}
+
+input[type='text']:focus{
+    outline: none;
+    border-bottom: 3px solid #3AB2DE;
+}
+
+.profile-form{
+    display: grid;
+    box-sizing: border-box;
+}
+
+.profile-form h1{
+    margin: .5em;
+}
+
+textarea{
+    margin: 1em;
+    box-sizing: border-box;
+    resize: none;
+    padding: 1em;
+    border: 3px solid #E7E7E7;
+}
+
+textarea:focus{
+    outline: none;
+    border: 3px solid #3AB2DE ;
+}
+
+.education-form{
+    box-sizing: border-box;
+    display: grid;
+}
+
+.education-form h1{
+    margin: .5em;
+}
+
+.education-form input{
+    padding: 1em;
+    margin: 1em;
+}
+
+.work-exp-form{
+    display: grid;
+}
+
+.work-exp-form h1{
+    margin: .5em;
+}
+
+
+.work-exp-form input{
+    padding: 1em;
+    margin: 1em;
+}
+
+
+.skills-form{
+    display: grid;
+}
+
+.skills-form h1{
+    margin: .5em;
+}
+
+
+.skills-form input{
+    padding: 1em;
+    margin: 1em;
+}
+/* 
+.add-edu{
+    padding: 1em;
+    width: 15vw;
+    border: none;
+    background-color: #3AB2DE;
+    cursor: pointer;
+    font-size: .9em;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: all .25 ease-in-out;
+    will-change: transform;
+    margin: 1em;
+    color: white;
+}
+
+
+.add-edu:hover{
+    transform: scale(1.05);
+}
+
+.add-edu:active{
+    transform: scale(1.025);
+} */
+
+/* 
+.lastName-input,
+.firstName-input{
+    width: 50%;
+} */
