@@ -18,6 +18,9 @@ function App() {
   const [responsibility, setResponsibility] = useState("Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a voluptates necessitatibus distinctio sapiente sit ducimus labore, vero omnis vel. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, ducimus.")
   const [skill1, setSkill1] = useState('skill')
   const [skill2, setSkill2] = useState('skill')
+  const [phone, setPhone] = useState('+23485797533')
+  const [email, setEmail] = useState('YOUREMALI@GMAIL.COM')
+  const [address, setAddress] = useState('67 NEW YORK ROAD, LAGOS, NIGERIA')
 
   function handleFirstName(e){
     setFirstName(e.target.value)
@@ -64,6 +67,19 @@ function App() {
   function handleSkill2(e){
     setSkill2(e.target.value)
   }
+
+  function handlePhone(e){
+    setPhone(e.target.value)
+  }
+
+  function handleEmail(e){
+    setEmail(e.target.value)
+  }
+
+  function handleAddress(e){
+    setAddress(e.target.value)
+  }
+
   return (
     <div className='top'>
     <div className="cv-form">
@@ -93,7 +109,12 @@ function App() {
         <input type="text" className="skill-input" onChange={handleSkill1} placeholder='Skill'/>
         <input type="text" className="skill-input" onChange={handleSkill2} placeholder='Skill'/>
       </div>
-      <div className="contact-form"></div>
+      <div className="contact-form">
+        <h1>Contact</h1>
+        <input type="tel" className='phone-input' onChange={handlePhone} placeholder='Phone' />
+        <input type="email" className='email-inut' onChange={handleEmail} placeholder='Email' />
+        <input type="text" className='address-input' onChange={handleAddress} placeholder='Address'/>
+      </div>
     </div>
     <div className='cv-card'>
       <header>
@@ -110,15 +131,15 @@ function App() {
           <h2 className='heading'>Contact</h2>
           <div className="location">
             <img className='icon' src={locationIcon} alt="Location" />
-              67 NEW YORK ROAD, LAGOS, NIGERIA
+            {address == '' ? '67 NEW YORK ROAD, LAGOS, NIGERIA' : address}
           </div>
           <div className="email">
             <img src={emailIcon} alt="Email" className="icon" />
-            YOUREMALI@GMAIL.COM
+            {email == '' ? 'YOUREMALI@GMAIL.COM' : email}
           </div>
           <div className="phone">
             <img src={phoneIcon} alt="Telephone number" className="icon" />
-            +23485797533
+            {phone == '' ? '+23485797533' : phone}
           </div>
         </div>
         <div className="education">
